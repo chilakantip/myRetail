@@ -1,2 +1,2 @@
 # myRetail
-Target company interview Technical Assessment Case Study 
+Target company interview test on Technical Assessment Case Study 
