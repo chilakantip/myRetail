@@ -1,0 +1,180 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 10.6 (Ubuntu 10.6-0ubuntu0.18.04.1)
+-- Dumped by pg_dump version 10.6 (Ubuntu 10.6-0ubuntu0.18.04.1)
+
+-- Started on 2018-12-05 02:55:26 IST
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+DROP DATABASE my_retail_db;
+--
+-- TOC entry 2921 (class 1262 OID 24690)
+-- Name: my_retail_db; Type: DATABASE; Schema: -; Owner: my_retail
+--
+
+CREATE DATABASE my_retail_db WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'en_IN' LC_CTYPE = 'en_IN';
+
+
+ALTER DATABASE my_retail_db OWNER TO my_retail;
+
+\connect my_retail_db
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 1 (class 3079 OID 13039)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 2924 (class 0 OID 0)
+-- Dependencies: 1
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+--
+-- TOC entry 197 (class 1259 OID 32888)
+-- Name: id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.id_seq OWNER TO postgres;
+
+--
+-- TOC entry 196 (class 1259 OID 32886)
+-- Name: product_id_seq; Type: SEQUENCE; Schema: public; Owner: my_retail
+--
+
+CREATE SEQUENCE public.product_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.product_id_seq OWNER TO my_retail;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 198 (class 1259 OID 32896)
+-- Name: products; Type: TABLE; Schema: public; Owner: my_retail
+--
+
+CREATE TABLE public.products (
+    id bigint DEFAULT nextval('public.id_seq'::regclass) NOT NULL,
+    product_id bigint DEFAULT nextval('public.product_id_seq'::regclass) NOT NULL,
+    product_cost double precision,
+    currency_code character(3),
+    updated_on timestamp with time zone
+);
+
+
+ALTER TABLE public.products OWNER TO my_retail;
+
+--
+-- TOC entry 2915 (class 0 OID 32896)
+-- Dependencies: 198
+-- Data for Name: products; Type: TABLE DATA; Schema: public; Owner: my_retail
+--
+
+INSERT INTO public.products (id, product_id, product_cost, currency_code, updated_on) VALUES (1, 1, 2, 'USD', '2018-12-04 22:51:22.586029+05:30');
+INSERT INTO public.products (id, product_id, product_cost, currency_code, updated_on) VALUES (3, 3, 2, 'USD', '2018-12-04 22:51:49.300423+05:30');
+INSERT INTO public.products (id, product_id, product_cost, currency_code, updated_on) VALUES (4, 4, 2, 'USD', '2018-12-04 22:54:45.442174+05:30');
+INSERT INTO public.products (id, product_id, product_cost, currency_code, updated_on) VALUES (5, 5, 2, 'USD', '2018-12-04 22:54:53.891618+05:30');
+INSERT INTO public.products (id, product_id, product_cost, currency_code, updated_on) VALUES (6, 6, 2, 'USD', '2018-12-04 22:55:49.283964+05:30');
+INSERT INTO public.products (id, product_id, product_cost, currency_code, updated_on) VALUES (11, 11, 2, 'USD', '2018-12-04 22:59:12.284571+05:30');
+INSERT INTO public.products (id, product_id, product_cost, currency_code, updated_on) VALUES (12, 12, 2, 'USD', '2018-12-04 23:04:00.082957+05:30');
+INSERT INTO public.products (id, product_id, product_cost, currency_code, updated_on) VALUES (13, 13, 2, 'USD', '2018-12-04 23:04:07.817857+05:30');
+INSERT INTO public.products (id, product_id, product_cost, currency_code, updated_on) VALUES (14, 14, 300000, 'INR', '2018-12-04 23:52:17.352243+05:30');
+INSERT INTO public.products (id, product_id, product_cost, currency_code, updated_on) VALUES (15, 15, 300000, 'INR', '2018-12-04 23:52:22.651044+05:30');
+INSERT INTO public.products (id, product_id, product_cost, currency_code, updated_on) VALUES (2, 2, 50, 'CCC', '2018-12-05 01:11:49.205241+05:30');
+INSERT INTO public.products (id, product_id, product_cost, currency_code, updated_on) VALUES (16, 16, 56, 'INR', '2018-12-05 02:24:56.646754+05:30');
+
+
+--
+-- TOC entry 2925 (class 0 OID 0)
+-- Dependencies: 197
+-- Name: id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.id_seq', 17, true);
+
+
+--
+-- TOC entry 2926 (class 0 OID 0)
+-- Dependencies: 196
+-- Name: product_id_seq; Type: SEQUENCE SET; Schema: public; Owner: my_retail
+--
+
+SELECT pg_catalog.setval('public.product_id_seq', 17, true);
+
+
+--
+-- TOC entry 2789 (class 2606 OID 32902)
+-- Name: products id_pk; Type: CONSTRAINT; Schema: public; Owner: my_retail
+--
+
+ALTER TABLE ONLY public.products
+    ADD CONSTRAINT id_pk PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2791 (class 2606 OID 32904)
+-- Name: products product_id_unique; Type: CONSTRAINT; Schema: public; Owner: my_retail
+--
+
+ALTER TABLE ONLY public.products
+    ADD CONSTRAINT product_id_unique UNIQUE (product_id);
+
+
+--
+-- TOC entry 2923 (class 0 OID 0)
+-- Dependencies: 5
+-- Name: SCHEMA public; Type: ACL; Schema: -; Owner: postgres
+--
+
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2018-12-05 02:55:27 IST
+
+--
+-- PostgreSQL database dump complete
+--
+

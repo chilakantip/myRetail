@@ -1,0 +1,1 @@
+curl  -X POST -H "Content-Type: application/json" -d '{ "current_prise" : { "value" : 300000, "currency_code" : "INR" }, "product_details" : { "name" : "BTC", "description" : "bitcoin", "type" : "currency" } }' https://localhost:3000/products
