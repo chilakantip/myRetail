@@ -27,7 +27,15 @@ const (
 )
 
 var apiErrors = map[int]apiErrDetails{
-	101: {Message: "failed to start test"},
+	101: {Message: "failed to parse product info"},
+	102: {Message: "product info validation failed"},
+	103: {Message: "create product failed"},
+	104: {Message: "product id is empty"},
+	105: {Message: "no record found"},
+	106: {Message: "failed to get product details"},
+	107: {Message: "invalid product id"},
+	108: {Message: "no record affected"},
+	109: {Message: "failed to delete the product info"},
 }
 
 func newApiErr(code int, errIn error, errors ...string) *apiErr {
@@ -61,8 +69,35 @@ func newApiErr(code int, errIn error, errors ...string) *apiErr {
 	return &e
 }
 
-func apiErrNoRecords() *apiErr {
-	return newApiErr(114, nil)
+func apiErrProductInfoParseFailed() *apiErr {
+	return newApiErr(101, nil)
+}
+func apiErrValidationFailed(err error) *apiErr {
+	return newApiErr(102, err)
+}
+func apiErrAddProductFailed() *apiErr {
+	return newApiErr(103, nil)
+}
+func apiErrProductIDEmpty() *apiErr {
+	return newApiErr(104, nil)
+}
+func apiErrNoRecord() *apiErr {
+	return newApiErr(105, nil)
+}
+func apiErrGetProductFailed() *apiErr {
+	return newApiErr(106, nil)
+}
+func apiErrInvalidProductID() *apiErr {
+	return newApiErr(107, nil)
+}
+func apiErrFailedUpdateProduct() *apiErr {
+	return newApiErr(107, nil)
+}
+func apiErrNoRecordAffected() *apiErr {
+	return newApiErr(108, nil)
+}
+func apiErrDeleteProductFailed() *apiErr {
+	return newApiErr(109, nil)
 }
 
 // helpers

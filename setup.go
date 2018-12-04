@@ -8,6 +8,7 @@ import (
 	"github.com/chilakantip/avitar/log"
 	"github.com/chilakantip/avitar/pidfile"
 	"github.com/chilakantip/my_retail/env"
+	"github.com/chilakantip/my_retail/mg_persist"
 	"github.com/chilakantip/my_retail/pg_persist"
 )
 
@@ -27,7 +28,21 @@ func doCommonSetUp() {
 	if err := pg_persist.ConnectToPGDB(cfg); err != nil {
 		abort(err)
 	}
-	fmt.Println("\nConnected to DB...", cfg.Database)
+	fmt.Println("Connected to postgres DB...", cfg.Database)
+
+	//connect to Nosql Mongo DB
+	cfgmg := mg_persist.Config{
+		Host:       env.DBmgHost,
+		Port:       env.DBmgPort,
+		Database:   env.DBmgDatabase,
+		Collection: env.DBmgCollection,
+		User:       env.DBmgUser,
+		Password:   env.DBmgPassword,
+	}
+	if err := mg_persist.ConnectToMongoDB(cfgmg); err != nil {
+		abort(err)
+	}
+	fmt.Println(fmt.Sprintf("Connected to Mongo DB: %s, Collection: %s", cfgmg.Database, cfgmg.Collection))
 
 }
 

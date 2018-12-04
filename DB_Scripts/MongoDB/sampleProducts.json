@@ -1,0 +1,20 @@
+{"_id":{"$oid":"5c063971561f81de18dd2463"},"ProductID":{"$numberInt":"1"},"Name":"Tshirts","Description":"Tshirts","Type":"men","CreatedOn":"Tue Dec 04 2018 13:53:13 GMT+0530 (IST)"}
+{"_id":{"$oid":"5c064037af7d1d92ec11cdfa"},"Description":"iPhone6","Type":"mobile","CreatedOn":"Tue Dec 04 2018 14:22:07 GMT+0530 (IST)","ProductID":{"$numberInt":"2"},"Name":"iPhone6"}
+{"_id":{"$oid":"5c064049cd3e9b15310580eb"},"ProductID":{"$numberInt":"3"},"Name":"iPhone6s","Description":"iPhone6","Type":"mobile","CreatedOn":"Tue Dec 04 2018 14:22:25 GMT+0530 (IST)"}
+{"_id":{"$oid":"5c06405c37b61d05dee07adf"},"ProductID":{"$numberInt":"11"},"Name":"iPhone7","Description":"iPhone7","Type":"mobile","CreatedOn":"Tue Dec 04 2018 14:22:44 GMT+0530 (IST)"}
+{"_id":{"$oid":"5c0640719426140f9fff9497"},"ProductID":{"$numberInt":"4"},"Name":"iPhone8","Description":"iPhone8","Type":"mobile","CreatedOn":"Tue Dec 04 2018 14:23:05 GMT+0530 (IST)"}
+{"_id":{"$oid":"5c0640970fd4e6babde230d0"},"ProductID":{"$numberInt":"5"},"Name":"BTC","Description":"Bitcoin","Type":"currency","CreatedOn":"2018-12-04 14:23:43.412"}
+{"_id":{"$oid":"5c0640b6a801d9c5eba9f04d"},"ProductID":{"$numberInt":"6"},"Name":"LTC","Description":"lite coin","Type":"currency","CreatedOn":"2018-12-04 14:24:14.055"}
+{"_id":{"$oid":"5c0640f71b81c289854feaeb"},"ProductID":{"$numberInt":"7"},"Name":"Model3","Description":"Tesla Model3","Type":"car","CreatedOn":"2018-12-04 14:25:19.054"}
+{"_id":{"$oid":"5c0641395a6304913003834b"},"ProductID":{"$numberInt":"8"},"Name":"Think pad","Description":"Lenova think pad","Type":"computer","CreatedOn":"2018-12-04 14:26:25.710"}
+{"_id":{"$oid":"5c0641e97006ea1754de232d"},"Type":"gadgets","CreatedOn":"2018-12-04 14:29:21.731","ProductID":{"$numberInt":"9"},"Name":"Alexa","Description":"Amazon alex echo"}
+{"_id":{"$oid":"5c06420b3e5b0d05342e3d29"},"Name":"Kindle","Description":"Amazon kindle Reader kit","Type":"gadgets","CreatedOn":"2018-12-04 14:29:55.440","ProductID":{"$numberInt":"10"}}
+{"_id":{"$oid":"5c0670addc80a17f24089f77"},"ProductID":{"$numberInt":"1"},"Name":"Tshirts","Description":"Tshirts","Type":"men","CreatedOn":"Tue Dec 04 2018 13:53:13 GMT+0530 (IST)"}
+{"_id":{"$oid":"5c0670c6dc80a17f24089f78"},"ProductID":{"$numberInt":"1"},"Name":"Tshirts","Description":"Tshirts","Type":"men","CreatedOn":"Tue Dec 04 2018 13:53:13 GMT+0530 (IST)"}
+{"_id":{"$oid":"5c0670d3dc80a17f24089f79"},"Name":"Kindle","Description":"Amazon kindle Reader kit","Type":"gadgets","CreatedOn":"Tue Dec 04 2018 14:29:55 GMT+0530 (IST)","ProductID":{"$numberInt":"10"}}
+{"_id":{"$oid":"5c0670eedc80a17f24089f7a"},"ProductID":{"$numberInt":"1"},"Name":"Tshirts","Description":"Tshirts","Type":"men","CreatedOn":"Tue Dec 04 2018 13:53:13 GMT+0530 (IST)"}
+{"_id":{"$oid":"5c0670f6dc80a17f24089f7b"},"Name":"Kindle","Description":"Amazon kindle Reader kit","Type":"gadgets","CreatedOn":"2018-12-04 14:29:55.440","ProductID":"10"}
+{"_id":{"$oid":"5c067102dc80a17f24089f7c"},"Name":"Kindle","Description":"Amazon kindle Reader kit","Type":"gadgets","CreatedOn":"Tue Dec 04 2018 14:29:55 GMT+0530 (IST)","ProductID":{"$numberInt":"10"}}
+{"_id":{"$oid":"5c067110dc80a17f24089f7d"},"ProductID":{"$numberInt":"7"},"Name":"Model3","Description":"Tesla Model3","Type":"car","CreatedOn":"Tue Dec 04 2018 14:25:19 GMT+0530 (IST)"}
+{"_id":{"$oid":"5c067151351e976d0482a249"},"ProductID":{"$numberInt":"1"},"Name":"Tshirts","Description":"Tshirts","Type":"men","CreatedOn":"Tue Dec 04 2018 13:53:13 GMT+0530 (IST)"}
+{"_id":{"$oid":"5c0671dc351e976d0482a24a"},"ProductID":{"$numberInt":"7"},"Name":"Model3","Description":"Tesla Model3","Type":"car","CreatedOn":"Tue Dec 04 2018 14:25:19 GMT+0530 (IST)"}

@@ -20,16 +20,16 @@ func main() {
 	quit := make(chan os.Signal)
 	signal.Notify(quit, syscall.SIGHUP, syscall.SIGTERM, syscall.SIGINT, syscall.SIGQUIT)
 
-	e = echo.New()
+	e := echo.New()
 	e.Use(middleware.Secure())
 	e.Use(middleware.Recover())
 	e.Use(middleware.Logger())
 
-	assignHandlers(&e)
+	assignHandlers(e)
 
 	fmt.Println("Starting echo.labstack.com server...")
 	go func() {
-		if err := e.Start(env.ServiceOnPort); err != nil {
+		if err := e.StartTLS(env.ServiceOnPort, "cert/cert.pem", "cert/key.pem"); err != nil {
 			log.Info("got error,shutting down the server", err)
 		}
 	}()

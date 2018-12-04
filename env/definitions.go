@@ -16,3 +16,19 @@ var (
 	DBPassword string
 	DBDatabase string
 )
+
+// mango DB variables...
+var (
+	DBmgHost       string
+	DBmgPort       string
+	DBmgUser       string
+	DBmgPassword   string
+	DBmgDatabase   string
+	DBmgCollection string
+)
+
+// currency type
+
+var (
+	CurrencyType string
+)

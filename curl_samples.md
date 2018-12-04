@@ -1,1 +1,1 @@
-curl -X POST -H "Content-Type: application/json" -d '{ "servic": "", "channel": "Mobile/b","user": { "hash": "4C8648F2D0770D7A7ED877904BA58155" } }' http://localhost:7001/
+curl  -X POST -H "Content-Type: application/json" -d '{ "current_prise" : { "value" : 300000, "currency_code" : "INR" }, "product_details" : { "name" : "BTC", "description" : "bitcoin", "type" : "currency" } }' https://localhost:3000/products
