@@ -26,6 +26,7 @@ _testmain.go
 my_retail
 my_retail.pid
 log
+vendor
 
 # Ignore data folder
 
