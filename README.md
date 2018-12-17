@@ -31,6 +31,7 @@ myRetail requires [Go](https://golang.org/) go1.10+ to run.
 Install the dependencies and also run the DB scripts at 'DB_Scripts' and start the server.
 
 ```sh
+$ git clone git@github.com:chilakantip/my_retail.git
 $ cd my_retail
 $ go build
 $ ./my_retail
